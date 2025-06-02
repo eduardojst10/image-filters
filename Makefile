@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Iinclude
 
-SRC = server/server.c server/logger.c
+SRC = server/server.c utils/logger.c
 OUT = filters_server
 
 all:

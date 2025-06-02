@@ -6,7 +6,7 @@
 #include <fcntl.h>
 #include <string.h> 
 #include <stdlib.h>
-#include "include/logger.h"
+#include "../utils/include/logger.h"
 #define FIFO_PATH "/tmp/fifo_server"
 #define BUF_SIZE 256
 
@@ -37,7 +37,7 @@ int main(){
         ssize_t bytes_read = read(fifo_fd,buffer,BUF_SIZE-1);
         if(bytes_read > 0){
             buffer[bytes_read] = '\0';
-            logger_detail("INFO", "[SERVIDOR] Pedido recebido: %s\n", buffer );
+            logger_detail("INFO", "[SERVIDOR] Pedido recebido: %s", buffer );
             //printf("[SERVIDOR] Pedido recebido: %s\n", buffer);
         }
 

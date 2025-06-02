@@ -28,7 +28,7 @@ void logger_detail(const char* tag, const char* format, ...) {
 
    printf("%s [%s]: ", ts, tag);
    vprintf(format, args);
-   printf("\n");
+   //printf("\n");
 
    va_end(args);
 }
